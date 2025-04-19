@@ -11,13 +11,14 @@
 <br />
 <div align="center">
   <a href="https://github.com/ConnorRobertson/connor-cli">
-    <img src="images/connor_cli_badge.png" width="80" height="80">
+    <img src="images/connor_cli_logo.png" width="300" height="300">
   </a>
 
 <h3 align="center">Connor CLI</h3>
 
   <p align="center">
     A CLI project written in Golang for learning and experimentation purposes!
+    <br>
     <a href="https://github.com/ConnorRobertson/connor-cli/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
     &middot;
     <a href="https://github.com/ConnorRobertson/connor-cli/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
