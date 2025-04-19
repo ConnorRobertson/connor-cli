@@ -11,7 +11,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/ConnorRobertson/connor-cli">
-    <img src="images/connor_cli_logo.png" alt="Logo" width="80" height="80">
+    <img src="images/connor_cli_badge.png" width="80" height="80">
   </a>
 
 <h3 align="center">Connor CLI</h3>
