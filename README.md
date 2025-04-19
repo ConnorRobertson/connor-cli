@@ -1,0 +1,134 @@
+<a id="readme-top"></a>
+
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![unlicense][license-shield]][license-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
+
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a href="https://github.com/ConnorRobertson/connor-cli">
+    <img src="images/connor_cli_logo.png" alt="Logo" width="80" height="80">
+  </a>
+
+<h3 align="center">Connor CLI</h3>
+
+  <p align="center">
+    A CLI project written in Golang for learning and experimentation purposes!
+    <a href="https://github.com/ConnorRobertson/connor-cli/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
+    &middot;
+    <a href="https://github.com/ConnorRobertson/connor-cli/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
+  </p>
+</div>
+
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#acknowledgments">Acknowledgments</a></li>
+  </ol>
+</details>
+
+<!-- ABOUT THE PROJECT -->
+
+## About The Project
+
+<!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+### Built With
+
+As this is a project to learn Golang this is going to be almost entirely written in Go!
+
+- [![Go][Go.dev]][go-url]
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- GETTING STARTED -->
+
+## Getting Started
+
+This is just a template I will add more details to this section when this is in a more complete state
+
+### Prerequisites
+
+Install Go
+
+- [Here is a Great Guide](https://go.dev/doc/install)
+
+### Installation
+
+1. Clone the repo
+   ```sh
+   git clone https://github.com/ConnorRobertson/connor-cli.git
+   ```
+2. Change git remote url to avoid accidental pushes to base project
+   ```sh
+   git remote set-url origin ConnorRobertson/connor-cli
+   git remote -v # confirm the changes
+   ```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LICENSE -->
+
+## License
+
+Distributed under the unlicense. See `LICENSE.txt` for more information.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- CONTACT -->
+
+## Contact
+
+Connor Robertson - robertsonc4@gmail.com
+
+Project Link: [https://github.com/ConnorRobertson/connor-cli](https://github.com/ConnorRobertson/connor-cli)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- ACKNOWLEDGMENTS -->
+
+## Acknowledgments
+
+- [README Template](https://github.com/othneildrew/Best-README-Template/tree/main)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
+[contributors-shield]: https://img.shields.io/github/contributors/ConnorRobertson/connor-cli.svg?style=for-the-badge
+[contributors-url]: https://github.com/ConnorRobertson/connor-cli/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/ConnorRobertson/connor-cli.svg?style=for-the-badge
+[forks-url]: https://github.com/ConnorRobertson/connor-cli/network/members
+[stars-shield]: https://img.shields.io/github/stars/ConnorRobertson/connor-cli.svg?style=for-the-badge
+[stars-url]: https://github.com/ConnorRobertson/connor-cli/stargazers
+[issues-shield]: https://img.shields.io/github/issues/ConnorRobertson/connor-cli.svg?style=for-the-badge
+[issues-url]: https://github.com/ConnorRobertson/connor-cli/issues
+[license-shield]: https://img.shields.io/github/license/ConnorRobertson/connor-cli.svg?style=for-the-badge
+[license-url]: https://github.com/ConnorRobertson/connor-cli/blob/master/LICENSE.txt
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://linkedin.com/in/connor-robertson-software-engineer
+[go.dev]: https://img.shields.io/badge/go-%2300ADD8.svg?style=for-the-badge&logo=go&logoColor=white
+[go-url]: https://go.dev/
