@@ -4,7 +4,6 @@
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
-[![Unlicense][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 <!-- PROJECT LOGO -->
@@ -127,8 +126,6 @@ Project Link: [https://github.com/ConnorRobertson/connor-cli](https://github.com
 [stars-url]: https://github.com/ConnorRobertson/connor-cli/stargazers
 [issues-shield]: https://img.shields.io/github/issues/ConnorRobertson/connor-cli.svg?style=for-the-badge
 [issues-url]: https://github.com/ConnorRobertson/connor-cli/issues
-[license-shield]: https://img.shields.io/github/license/ConnorRobertson/connor-cli.svg?style=for-the-badge
-[license-url]: ttps://github.com/ConnorRobertson/connor-cli/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/connor-robertson-software-engineer
 [go.dev]: https://img.shields.io/badge/go-%2300ADD8.svg?style=for-the-badge&logo=go&logoColor=white
