@@ -86,6 +86,14 @@ Install Go
    git remote set-url origin ConnorRobertson/connor-cli
    git remote -v # confirm the changes
    ```
+3. Compile coding into a binary (Go should automatically create a binary based on your OS installation)
+   ```sh
+   go build -o connorcli cmd/main.go
+   ```
+4. You can now run `./connorcli`
+   ```sh
+   ./connorcli -h
+   ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -112,6 +120,7 @@ Project Link: [https://github.com/ConnorRobertson/connor-cli](https://github.com
 ## Acknowledgments
 
 - [README Template](https://github.com/othneildrew/Best-README-Template/tree/main)
+- [Cobra CLI Package](https://github.com/spf13/cobra-cli/tree/main)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
