@@ -5,6 +5,7 @@ package connorcli
 import (
 	"fmt"
 	// Custom cmds
+	"connorcli/cmd/connorcli/connorcli"
 	"connorcli/cmd/connorcli/list"
 
 	"github.com/spf13/cobra"
@@ -19,7 +20,7 @@ func RootCommand() *cobra.Command {
 			fmt.Fprint(cmd.OutOrStdout(), "Welcome to Connor CLI!\n")
 		},
 	}
-	cmd.AddCommand(GreetCommand())
+	cmd.AddCommand(connorcli.GreetCommand())
 	cmd.AddCommand(list.ListCommand())
 
 	return cmd

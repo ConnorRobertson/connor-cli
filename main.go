@@ -7,7 +7,7 @@ import (
 	"os"
 
 	// Custom CLI commands
-	"connorcli/cmd/connorcli"
+	connorcli "connorcli/cmd/connorcli/root"
 )
 
 func main() {
