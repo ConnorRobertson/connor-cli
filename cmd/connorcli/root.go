@@ -16,7 +16,7 @@ func RootCommand() *cobra.Command {
 		Short: "A simple cli test",
 		Long:  "A basic run through using Cobra to create a custom CLI",
 		Run: func(cmd *cobra.Command, args []string) {
-			fmt.Fprint(cmd.OutOrStdout(), "Welcome to Connor Cli!\n")
+			fmt.Fprint(cmd.OutOrStdout(), "Welcome to Connor CLI!\n")
 		},
 	}
 	cmd.AddCommand(GreetCommand())
