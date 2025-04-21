@@ -1,16 +1,18 @@
 // cmd/greeter/root.go
 
-package greeter
+package connorcli
 
 import (
 	"fmt"
+	// Custom cmds
+	"connorcli/cmd/connorcli/list"
 
 	"github.com/spf13/cobra"
 )
 
 func RootCommand() *cobra.Command {
 	cmd := &cobra.Command{
-		Use:   "greeter",
+		Use:   "hello",
 		Short: "A simple cli test",
 		Long:  "A basic run through using Cobra to create a custom CLI",
 		Run: func(cmd *cobra.Command, args []string) {
@@ -18,6 +20,7 @@ func RootCommand() *cobra.Command {
 		},
 	}
 	cmd.AddCommand(GreetCommand())
+	cmd.AddCommand(list.ListCommand())
 
 	return cmd
 }

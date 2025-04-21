@@ -1,6 +1,4 @@
-// cmd/greeter/root.go
-
-package greeter
+package connorcli
 
 import (
 	"fmt"
