@@ -7,11 +7,11 @@ import (
 	"os"
 
 	// Custom CLI commands
-	"connorcli/cmd/greeter"
+	"connorcli/cmd/connorcli"
 )
 
 func main() {
-	rootCmd := greeter.RootCommand()
+	rootCmd := connorcli.RootCommand()
 	if err := rootCmd.Execute(); err != nil {
 		fmt.Println(err)
 		os.Exit(1)
