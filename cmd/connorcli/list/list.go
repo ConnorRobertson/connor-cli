@@ -4,26 +4,45 @@ import (
 	"log"
 	"os"
 	"strconv"
+	"strings"
 	"time"
 
 	"github.com/spf13/cobra"
 )
 
 func ListCommand() *cobra.Command {
-	cmd := &cobra.Command{
+	return &cobra.Command{
 		Use:   "list",
 		Short: "List files in the current directory",
 		Long:  "List all non-hidden files in the current directory",
+		Args:  cobra.MaximumNArgs(1),
 		Run: func(cmd *cobra.Command, args []string) {
-			print(ReadDirectory("./"))
+			if len(args) == 1 {
+				if strings.HasPrefix(args[0], "./") && strings.HasSuffix(args[0], "/") {
+					print(readDirectory(args[0], false))
+				} else {
+					log.Fatalf("%v is an Invalid Directory Structure! Ensure the given Directory starts with './' and ends with '/'.", args[0])
+				}
+
+			} else {
+				print(readDirectory("./", false))
+			}
 		},
 	}
-	// cmd.AddCommand(ListAllCommand())
-
-	return cmd
 }
 
-func ReadDirectory(dirName string) string {
+func ListAllCommand() *cobra.Command {
+	return &cobra.Command{
+		Use:   "lsall",
+		Short: "List files in the all directories",
+		Long:  "List all non-hidden files in the current directory and its subdirectories",
+		Run: func(cmd *cobra.Command, args []string) {
+			print(readDirectory("./", true))
+		},
+	}
+}
+
+func readDirectory(dirName string, isRecursive bool) string {
 	files, err := os.ReadDir(dirName)
 	if err != nil {
 		log.Fatal(err)
@@ -37,18 +56,26 @@ func ReadDirectory(dirName string) string {
 
 	for _, file := range files {
 		// Ignore hidden files
-		var isHidden bool = file.Name()[0] == '.'
+		var isHidden bool = strings.HasPrefix(file.Name(), ".")
+
 		if !isHidden && !file.IsDir() {
-			fileInfo, err := os.Stat(file.Name())
+			fileInfo, err := os.Stat(dirName + file.Name())
+
+			// Error Handling
 			if err != nil {
 				log.Fatal(err)
 			}
-			output += "- " + Red + fileInfo.Name() + Green + " Size: " + strconv.FormatInt(fileInfo.Size(), 10) + " Bytes " +
+			// Output in the form of dirName/fileName
+			output += Red + dirName + fileInfo.Name() + Green + " Size: " + strconv.FormatInt(fileInfo.Size(), 10) + " Bytes " +
 				Cyan + "Last Modified: " + fileInfo.ModTime().UTC().Format(time.UnixDate) + Reset + "\n"
-		}
-		if file.IsDir() && !isHidden {
+		} else if file.IsDir() && !isHidden {
+			if isRecursive {
+				// Recursively checks directories and outputs all the files in a given directory
+				output += readDirectory(dirName+file.Name()+"/", true)
+			} else {
+				output += "📁 " + Cyan + file.Name() + Reset + "\n"
+			}
 
-			output += "📁 " + Cyan + file.Name() + Reset + "\n"
 		}
 	}
 	return output
