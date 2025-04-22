@@ -20,8 +20,11 @@ func RootCommand() *cobra.Command {
 			fmt.Fprint(cmd.OutOrStdout(), "Welcome to Connor CLI!\n")
 		},
 	}
+
+	// Add Commands
 	cmd.AddCommand(connorcli.GreetCommand())
 	cmd.AddCommand(list.ListCommand())
+	cmd.AddCommand(list.ListAllCommand())
 
 	return cmd
 }

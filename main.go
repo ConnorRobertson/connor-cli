@@ -3,8 +3,7 @@
 package main
 
 import (
-	"fmt"
-	"os"
+	"log"
 
 	// Custom CLI commands
 	connorcli "connorcli/cmd/connorcli/root"
@@ -13,7 +12,6 @@ import (
 func main() {
 	rootCmd := connorcli.RootCommand()
 	if err := rootCmd.Execute(); err != nil {
-		fmt.Println(err)
-		os.Exit(1)
+		log.Fatal(err)
 	}
 }

@@ -52,7 +52,9 @@
 ## About The Project
 
 <!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
-A custom CLI for Connor by Connor. Supports list (ls), greet (says hello to an input argument), help, and running without a command.
+
+A custom CLI for Connor by Connor. Supports list (ls), lsall (recursive list basically), greet (says hello to an input argument), help, and running without a command.
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Built With
@@ -67,7 +69,7 @@ As this is a project to learn Golang this is going to be almost entirely written
 
 ## Getting Started
 
-This is just a template I will add more details to this section when this is in a more complete state
+This is just a template I will add more details to this section when this is in a more complete state.
 
 ### Prerequisites
 
@@ -86,7 +88,7 @@ Install Go
    git remote set-url origin ConnorRobertson/connor-cli
    git remote -v # confirm the changes
    ```
-3. Compile coding into a binary (Go should automatically create a binary based on your OS installation)
+3. Compile code into a binary (Go should automatically create a binary based on your OS installation)
    ```sh
    go build -o connorcli cmd/main.go
    ```
@@ -94,6 +96,10 @@ Install Go
    ```sh
    ./connorcli -h
    ```
+5. When you are done running Connor CLI you can remove the binaries with `go clean`
+
+   Alternatively, if you are on Ubuntu (haven't tested any other distros) you can run the shell script it will need sudo privileges.
+   It adds the output binary to the /usr/local/bin so you can just run `connorcli`
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -109,9 +115,9 @@ Distributed under the unlicense. See `LICENSE.txt` for more information.
 
 ## Contact
 
-Connor Robertson - robertsonc4@gmail.com
+**Connor Robertson** - robertsonc4@gmail.com
 
-Project Link: [https://github.com/ConnorRobertson/connor-cli](https://github.com/ConnorRobertson/connor-cli)
+**Project Link:** [https://github.com/ConnorRobertson/connor-cli](https://github.com/ConnorRobertson/connor-cli)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
