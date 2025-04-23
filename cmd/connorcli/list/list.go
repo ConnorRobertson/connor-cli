@@ -13,15 +13,23 @@ import (
 func ListCommand() *cobra.Command {
 	return &cobra.Command{
 		Use:   "list",
-		Short: "List files in the current directory",
-		Long:  "List all non-hidden files in the current directory",
+		Short: "List files in the current or specified directory",
+		Long:  "List all non-hidden files in the current or specified directory",
 		Args:  cobra.MaximumNArgs(1),
 		Run: func(cmd *cobra.Command, args []string) {
 			if len(args) == 1 {
 				if strings.HasPrefix(args[0], "./") && strings.HasSuffix(args[0], "/") {
 					print(readDirectory(args[0], false))
 				} else {
-					log.Fatalf("%v is an Invalid Directory Structure! Ensure the given Directory starts with './' and ends with '/'.", args[0])
+					dirName := args[0]
+					if !strings.HasPrefix(args[0], "./") {
+						dirName = "./" + dirName
+					}
+					if !strings.HasSuffix(args[0], "/") {
+						dirName += "/"
+					}
+
+					print(readDirectory(dirName, false))
 				}
 
 			} else {
