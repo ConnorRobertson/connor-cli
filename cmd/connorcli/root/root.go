@@ -7,6 +7,7 @@ import (
 	// Custom cmds
 	"connorcli/cmd/connorcli/connorcli"
 	"connorcli/cmd/connorcli/list"
+	"connorcli/cmd/connorcli/rename"
 
 	"github.com/spf13/cobra"
 )
@@ -25,6 +26,7 @@ func RootCommand() *cobra.Command {
 	cmd.AddCommand(connorcli.GreetCommand())
 	cmd.AddCommand(list.ListCommand())
 	cmd.AddCommand(list.ListAllCommand())
+	cmd.AddCommand(rename.RenameCommand())
 
 	return cmd
 }
