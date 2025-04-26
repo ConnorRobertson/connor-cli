@@ -6,6 +6,8 @@ import (
 	"fmt"
 	// Custom cmds
 	"connorcli/cmd/connorcli/connorcli"
+	"connorcli/cmd/connorcli/create"
+	del "connorcli/cmd/connorcli/delete"
 	"connorcli/cmd/connorcli/list"
 	"connorcli/cmd/connorcli/rename"
 
@@ -27,6 +29,8 @@ func RootCommand() *cobra.Command {
 	cmd.AddCommand(list.ListCommand())
 	cmd.AddCommand(list.ListAllCommand())
 	cmd.AddCommand(rename.RenameCommand())
+	cmd.AddCommand(del.DeleteCommand()) // Delete is a keyword I shouldn't use it
+	cmd.AddCommand(create.CreateCommand())
 
 	return cmd
 }
