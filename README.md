@@ -53,7 +53,7 @@
 
 <!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
 
-A custom CLI for Connor by Connor. Supports list (ls), lsall (recursive list basically), greet (says hello to an input argument), help, and running without a command.
+A custom CLI for Connor by Connor. Supports list (ls), lsall (recursive list basically), greet (says hello to an input argument), cre (touch), del (remove), rename (mv filename filename), help, and running without a command.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
