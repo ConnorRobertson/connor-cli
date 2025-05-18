@@ -10,6 +10,7 @@ import (
 	del "connorcli/cmd/connorcli/delete"
 	"connorcli/cmd/connorcli/list"
 	"connorcli/cmd/connorcli/rename"
+	"connorcli/cmd/connorcli/size"
 
 	"github.com/spf13/cobra"
 )
@@ -31,6 +32,7 @@ func RootCommand() *cobra.Command {
 	cmd.AddCommand(rename.RenameCommand())
 	cmd.AddCommand(del.DeleteCommand()) // Delete is a keyword I shouldn't use it
 	cmd.AddCommand(create.CreateCommand())
+	cmd.AddCommand(size.SizeCommand())
 
 	return cmd
 }
