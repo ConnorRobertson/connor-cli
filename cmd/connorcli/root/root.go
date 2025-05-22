@@ -7,6 +7,7 @@ import (
 	// Custom cmds
 	"connorcli/cmd/connorcli/connorcli"
 	"connorcli/cmd/connorcli/create"
+	createdir "connorcli/cmd/connorcli/create-dir"
 	del "connorcli/cmd/connorcli/delete"
 	"connorcli/cmd/connorcli/list"
 	"connorcli/cmd/connorcli/rename"
@@ -33,6 +34,7 @@ func RootCommand() *cobra.Command {
 	cmd.AddCommand(del.DeleteCommand()) // Delete is a keyword I shouldn't use it
 	cmd.AddCommand(create.CreateCommand())
 	cmd.AddCommand(size.SizeCommand())
+	cmd.AddCommand(createdir.CreateDirCommand())
 
 	return cmd
 }
